@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-lang="es" lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html data-lang="en" lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Santiago Espinosa García | Robotics</title>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
 <style>
@@ -69,6 +69,6 @@ footer{padding-top:80px;padding-bottom:48px}
 <script>
 const r=document.documentElement;
 function set(l){r.dataset.lang=l;r.lang=l}
-try{set(localStorage.getItem('l')||'es')}catch(e){}
+try{set(localStorage.getItem('l')||'en')}catch(e){}
 document.getElementById('lg').onclick=()=>{const l=r.dataset.lang==='es'?'en':'es';set(l);try{localStorage.setItem('l',l)}catch(e){}};
 </script></body></html>
