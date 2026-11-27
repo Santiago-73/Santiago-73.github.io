@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html data-lang="es" lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Santiago Espinosa García | Robotics</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#12303a;--deep:#0c232b;--ink:#edf4f2;--mute:#a9c0c2;--line:#2c4e58;--hand:#6fe3ae}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+html[data-lang=es] body [lang=en],html[data-lang=en] body [lang=es]{display:none}
+body{background:var(--bg);color:var(--ink);font:17px/1.6 'Atkinson Hyperlegible',sans-serif}
+.w{max-width:1040px;margin:auto;padding-inline:24px}
+h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;line-height:1.1}
+a{color:var(--hand);text-underline-offset:4px}
+:focus-visible{outline:2px solid var(--hand);outline-offset:3px}
+nav{display:flex;flex-wrap:wrap;gap:20px;align-items:center;padding-top:20px;padding-bottom:20px}
+nav b{margin-right:auto} nav a{color:var(--ink);text-decoration:none}
+button{font:inherit;cursor:pointer;background:none;color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:4px 12px}
+header{padding-top:48px;padding-bottom:40px}
+h1{font-size:clamp(2.3rem,6.5vw,4.4rem);max-width:17ch;letter-spacing:-.02em}
+header p{max-width:62ch;color:var(--mute);margin-top:20px}
+.links{display:flex;flex-wrap:wrap;gap:22px;margin-top:24px}
+figure{background:var(--deep);border:1px solid var(--line);border-radius:14px;padding:12px}
+figure img{display:block;width:100%;border-radius:6px}
+figcaption{padding:16px 8px 6px;display:grid;gap:6px}
+figcaption h2{font-size:1.6rem} figcaption p{color:var(--mute);max-width:75ch}
+section{padding-top:80px}
+section>h2{font-size:2rem;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.project{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;padding:32px 0;border-bottom:1px solid var(--line)}
+h3{font-size:1.4rem;margin-bottom:10px}
+.project p{color:var(--mute);margin-bottom:10px}
+.project .stack{color:var(--ink);font-size:.92rem}
+.chain{list-style:none;padding:0;align-self:center}
+.chain li{position:relative;padding:5px 0 5px 28px}
+.chain li::before{content:'';position:absolute;left:0;top:12px;width:11px;height:11px;border-radius:50%;background:var(--hand)}
+.chain li:not(:last-child)::after{content:'';position:absolute;left:5px;top:21px;height:calc(100% - 7px);width:1px;background:var(--ink)}
+.rows{list-style:none;padding:0}
+.rows li{display:grid;grid-template-columns:180px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.rows li>span,.rows li>div{color:var(--mute)} .rows b{color:var(--ink)}
+.two{display:grid;grid-template-columns:1fr 1fr;column-gap:40px}
+.two li{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+footer{padding-top:80px;padding-bottom:48px}
+@media(max-width:720px){.project,.two{grid-template-columns:1fr;gap:12px}.two{gap:0}.rows li{grid-template-columns:1fr;gap:2px}}
+</style></head><body>
+<nav class="w"><b>Santiago Espinosa García</b><a href="#projects"><span lang="es">Proyectos</span><span lang="en">Projects</span></a><a href="#path"><span lang="es">Trayectoria</span><span lang="en">Background</span></a><a href="#contact"><span lang="es">Contacto</span><span lang="en">Contact</span></a><button id="lg" type="button" aria-label="Cambiar idioma / Switch language"><span lang="es">EN</span><span lang="en">ES</span></button></nav>
+<header class="w"><h1 lang="es">Hago que los robots vean, decidan y se muevan.</h1><h1 lang="en">I make robots see, decide and move.</h1>
+<p lang="es">Estudiante de Ingeniería Electrónica, Robótica y Mecatrónica en la Universidad de Málaga, ahora de Erasmus en Skövde (Suecia) estudiando Ingeniería Industrial. Me interesa el software de percepción, control y toma de decisiones.</p><p lang="en">Electronics, Robotics and Mechatronics Engineering student at the University of Málaga, currently on exchange in Skövde (Sweden) studying Industrial Engineering. I care about perception, control and decision-making software.</p>
+<div class="links"><a href="https://github.com/Santiago-73">GitHub</a><a href="https://www.linkedin.com/in/santiago-espinosa-garc%C3%ADa-24b443305/">LinkedIn</a><a href="mailto:sanespi012@gmail.com">sanespi012@gmail.com</a></div></header>
+<main class="w">
+<figure><img src="demo.gif" width="640" height="332" alt="Demo: a hand in front of a webcam controlling a simulated Panda arm">
+<figcaption><h2>hand-teleop</h2>
+<p lang="es">Muevo la mano delante de una webcam y un brazo Panda simulado la sigue. Si junto el pulgar y el índice, se cierra la pinza.</p><p lang="en">I move my hand in front of a webcam and a simulated Panda arm follows it. Pinching thumb and index finger closes the gripper.</p>
+<p lang="es">Medido en mi portátil: menos de 1 mm de error en tres posiciones fijas enviadas por UDP, 19–32 FPS de tracking y 32 ms de mediana desde el paquete UDP hasta el topic.</p><p lang="en">Measured on my laptop: under 1 mm error on three fixed positions sent over UDP, 19–32 FPS tracking and 32 ms median from UDP packet to topic.</p>
+<p>ROS 2 Jazzy, MoveIt Servo, MediaPipe, Python. <a href="https://github.com/Santiago-73/hand-teleop"><span lang="es">Ver código</span><span lang="en">View code</span></a></p></figcaption></figure>
+<section id="projects"><h2 lang="es">Más proyectos</h2><h2 lang="en">More projects</h2>
+<article class="project"><div><h3><span lang="es">Célula de kitting guiada por visión</span><span lang="en">Vision-guided kitting cell</span></h3><p lang="es">Un UR5e simulado localiza piezas con una cámara de profundidad y se coloca sobre la del color que le pidas. Todavía no las agarra.</p><p lang="en">A simulated UR5e locates parts with a depth camera and moves above the colour you ask for. It does not grasp them yet.</p><p class="stack">ROS 2 Jazzy, Gazebo Harmonic, MoveIt 2, OpenCV, Python</p><a href="https://github.com/Santiago-73/ROS2_proyect"><span lang="es">Ver código</span><span lang="en">View code</span></a></div><ol class="chain"><li><span lang="es">Cámara RGB-D en Gazebo</span><span lang="en">RGB-D camera in Gazebo</span></li><li><span lang="es">Detección por color</span><span lang="en">Colour detection</span></li><li><span lang="es">Posición 3D y TF2</span><span lang="en">3D position and TF2</span></li><li><span lang="es">Movimiento con MoveIt 2</span><span lang="en">Motion with MoveIt 2</span></li></ol></article>
+</section>
+<section id="path"><h2 lang="es">Trayectoria</h2><h2 lang="en">Background</h2><ul class="rows">
+<li><span>2026–2027</span><div><b><span lang="es">Universidad de Skövde</span><span lang="en">University of Skövde</span></b><br><span lang="es">Erasmus+ y doble titulación en Ingeniería Industrial</span><span lang="en">Erasmus+ and double degree in Industrial Engineering</span></div></li>
+<li><span>2023–2028</span><div><b>Universidad de Málaga</b><br><span lang="es">Grado en Ingeniería Electrónica, Robótica y Mecatrónica</span><span lang="en">BSc in Electronics, Robotics and Mechatronics Engineering</span></div></li>
+<li><span><span lang="es">Desde 2025</span><span lang="en">Since 2025</span></span><div><b>Autonomous Driving Málaga (ADMA)</b><br><span lang="es">Miembro del equipo de conducción autónoma de la UMA</span><span lang="en">Member of the University of Málaga autonomous driving team</span></div></li></ul></section>
+<section><h2 lang="es">Certificaciones</h2><h2 lang="en">Certifications</h2><ul class="rows two"><li><b>e-Series Core Track</b><span>Universal Robots</span></li><li><b>Computer Vision Onramp</b><span>MathWorks</span></li><li><b>Machine Learning Onramp</b><span>MathWorks</span></li><li><b>MATLAB Onramp</b><span>MathWorks</span></li><li><b>Linux for Robotics</b><span>The Construct</span></li><li><b>AI Fundamentals</b><span>IBM</span></li><li><b>AI Fluency for Students</b><span>Anthropic</span></li><li><b>Gen AI: Beyond the Chatbot</b><span>Google</span></li></ul></section>
+<section><h2 lang="es">Herramientas</h2><h2 lang="en">Tools</h2><ul class="rows">
+<li><b><span lang="es">Robótica</span><span lang="en">Robotics</span></b><span>ROS 2, MoveIt 2, Gazebo, RobotStudio</span></li>
+<li><b><span lang="es">Programación</span><span lang="en">Programming</span></b><span>Python, C++, MATLAB, Linux/Bash, Git</span></li>
+<li><b><span lang="es">Idiomas</span><span lang="en">Languages</span></b><span><span lang="es">Español nativo, inglés B2, aprendiendo sueco</span><span lang="en">Native Spanish, English B2, learning Swedish</span></span></li></ul></section>
+</main>
+<footer class="w" id="contact"><h2 lang="es">Hablemos</h2><h2 lang="en">Get in touch</h2><div class="links"><a href="mailto:sanespi012@gmail.com">sanespi012@gmail.com</a><a href="https://www.linkedin.com/in/santiago-espinosa-garc%C3%ADa-24b443305/">LinkedIn</a><a href="https://github.com/Santiago-73">GitHub</a></div></footer>
+<script>
+const r=document.documentElement;
+function set(l){r.dataset.lang=l;r.lang=l}
+try{set(localStorage.getItem('l')||'es')}catch(e){}
+document.getElementById('lg').onclick=()=>{const l=r.dataset.lang==='es'?'en':'es';set(l);try{localStorage.setItem('l',l)}catch(e){}};
+</script></body></html>
