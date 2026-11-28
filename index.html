@@ -21,7 +21,7 @@ h1{font-size:clamp(2.3rem,6.5vw,4.4rem);max-width:17ch;letter-spacing:-.02em}
 header p{max-width:62ch;color:var(--mute);margin-top:20px}
 .links{display:flex;flex-wrap:wrap;gap:22px;margin-top:24px}
 figure{background:var(--deep);border:1px solid var(--line);border-radius:14px;padding:12px}
-figure img{display:block;width:100%;border-radius:6px}
+figure img,figure video{display:block;width:100%;height:auto;border-radius:6px}
 figcaption{padding:16px 8px 6px;display:grid;gap:6px}
 figcaption h2{font-size:1.6rem} figcaption p{color:var(--mute);max-width:75ch}
 section{padding-top:80px}
@@ -47,11 +47,11 @@ footer{padding-top:80px;padding-bottom:48px}
 <p lang="es">Estudiante de Ingeniería Electrónica, Robótica y Mecatrónica en la Universidad de Málaga, ahora de Erasmus en Skövde (Suecia) estudiando Ingeniería Industrial. Me interesa el software de percepción, control y toma de decisiones.</p><p lang="en">Electronics, Robotics and Mechatronics Engineering student at the University of Málaga, currently on exchange in Skövde (Sweden) studying Industrial Engineering. I care about perception, control and decision-making software.</p>
 <div class="links"><a href="https://github.com/Santiago-73">GitHub</a><a href="https://www.linkedin.com/in/santiago-espinosa-garc%C3%ADa-24b443305/">LinkedIn</a><a href="mailto:sanespi012@gmail.com">sanespi012@gmail.com</a></div></header>
 <main class="w">
-<figure><img src="demo.gif" width="640" height="332" alt="Demo: a hand in front of a webcam controlling a simulated Panda arm">
+<figure><video src="demo.mp4" poster="poster.jpg" width="1280" height="624" autoplay muted loop playsinline controls aria-label="Demo: a hand in front of a webcam controlling a simulated Panda arm with gestures"></video>
 <figcaption><h2>hand-teleop</h2>
-<p lang="es">Muevo la mano delante de una webcam y un brazo Panda simulado la sigue. Si junto el pulgar y el índice, se cierra la pinza.</p><p lang="en">I move my hand in front of a webcam and a simulated Panda arm follows it. Pinching thumb and index finger closes the gripper.</p>
+<p lang="es">Muevo la mano delante de una webcam y un brazo Panda simulado la sigue. Lo controlo con gestos: la pinza cierra el gripper, el puño hace de embrague (el brazo se queda quieto mientras recoloco la mano, como en los robots quirúrgicos) y el pulgar arriba lo recentra.</p><p lang="en">I move my hand in front of a webcam and a simulated Panda arm follows it. Gestures control it: a pinch closes the gripper, a fist works as a clutch (the arm holds still while I reposition my hand, like on surgical robots) and a thumbs up recenters it.</p>
 <p lang="es">Medido en mi portátil: menos de 1 mm de error en tres posiciones fijas enviadas por UDP, 19–32 FPS de tracking y 32 ms de mediana desde el paquete UDP hasta el topic.</p><p lang="en">Measured on my laptop: under 1 mm error on three fixed positions sent over UDP, 19–32 FPS tracking and 32 ms median from UDP packet to topic.</p>
-<p>ROS 2 Jazzy, MoveIt Servo, MediaPipe, Python. <a href="https://github.com/Santiago-73/hand-teleop"><span lang="es">Ver código</span><span lang="en">View code</span></a></p></figcaption></figure>
+<p>ROS 2 Jazzy, MoveIt Servo, MediaPipe, scikit-learn, Python. <a href="https://github.com/Santiago-73/hand-teleop"><span lang="es">Ver código</span><span lang="en">View code</span></a></p></figcaption></figure>
 <section id="projects"><h2 lang="es">Más proyectos</h2><h2 lang="en">More projects</h2>
 <article class="project"><div><h3><span lang="es">Célula de kitting guiada por visión</span><span lang="en">Vision-guided kitting cell</span></h3><p lang="es">Un UR5e simulado localiza piezas con una cámara de profundidad y se coloca sobre la del color que le pidas. Todavía no las agarra.</p><p lang="en">A simulated UR5e locates parts with a depth camera and moves above the colour you ask for. It does not grasp them yet.</p><p class="stack">ROS 2 Jazzy, Gazebo Harmonic, MoveIt 2, OpenCV, Python</p><a href="https://github.com/Santiago-73/ROS2_proyect"><span lang="es">Ver código</span><span lang="en">View code</span></a></div><ol class="chain"><li><span lang="es">Cámara RGB-D en Gazebo</span><span lang="en">RGB-D camera in Gazebo</span></li><li><span lang="es">Detección por color</span><span lang="en">Colour detection</span></li><li><span lang="es">Posición 3D y TF2</span><span lang="en">3D position and TF2</span></li><li><span lang="es">Movimiento con MoveIt 2</span><span lang="en">Motion with MoveIt 2</span></li></ol></article>
 </section>
